@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes App</title>
+</head>
+<body>
+
+    <h1>My Notes</h1>
+
+    <a href="/create">
+        Add Note
+    </a>
+
+    <hr>
+
+    {% for note in notes %}
+
+        <h2>{{ note.title }}</h2>
+
+        <p>{{ note.content }}</p>
+
+        <small>
+            Created: {{ note.created_at }}
+        </small>
+
+        <hr>
+
+    {% endfor %}
+
+</body>
+</html>
